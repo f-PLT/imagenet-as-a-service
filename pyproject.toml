@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "imagenet-as-a-service"
+version = "0.1.0"
+description = "Small project to test Imagenet model deployment."
+authors = ["f-PLT <pelletier.f@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+fastapi = "^0.104.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+pylint = "^3.0.2"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+disable = "C0114,C0115,C0116"
+
+[tool.black]
+line-length = 120
+target-version = ["py310","py311"]
+
+[tool.isort]
+profile = "black"
