@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "imagenet-as-a-service"
+name = "imagenet_service"
 version = "0.1.0"
 description = "Small project to test Imagenet model deployment."
 authors = ["f-PLT <pelletier.f@gmail.com>"]
@@ -10,6 +10,9 @@ readme = "README.md"
 python = ">=3.10,<3.12"
 fastapi = "^0.104.1"
 uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+torchvision = "^0.16.1"
+pillow = "^10.1.0"
+python-multipart = "^0.0.6"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.10.1"
