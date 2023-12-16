@@ -29,7 +29,7 @@ docker-run:  ## Run docker container(s)
 
 .PHONY: docker-stop
 docker-stop: ## Stop running docker container(s)
-	docker stop ${API_DOCKER_CONTAINER_NAME}
+	docker stop ${API_DOCKER_CONTAINER_NAME} || true
 
 .PHONY: docker-clean
 docker-clean: docker-stop ## Destroy docker images
