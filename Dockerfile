@@ -94,4 +94,4 @@ RUN touch README.md && \
 
 WORKDIR ${IMAGENET_SERVICE_DIR}/imagenet_service
 # Application runtime
-ENTRYPOINT [ "uvicorn", "main:app", "--host", "0.0.0.0" ]
+ENTRYPOINT [ "uvicorn", "main:app", "--reload", "--host", "0.0.0.0" ]
