@@ -1,19 +1,30 @@
+"""
+Nox configuration file for local testing. Reuses local environment to speed up
+process.
+
+A separate configuration will be required for CI
+"""
 import nox
 
 
 @nox.session()
 def check(session):
     """Lint the code using pylint."""
-    session.run("pylint", "imagenet_service", "tests")
+    session.run("pylint", "imagenet_service", "tests", external=True)
 
 
 @nox.session()
 def fix(session):
     """Autoformat code using isort and black."""
-    session.run("isort", "imagenet_service", "tests")
-    session.run("black", "imagenet_service", "tests")
+    session.run("isort", "imagenet_service", "tests", external=True)
+    session.run("black", "imagenet_service", "tests", external=True)
+
+
+@nox.session()
+def test(session):
+    session.run("pytest", external=True)
 
 
 # Specify the dependencies required for both linting and formatting sessions
-nox.options.sessions = ["fix", "check"]
+nox.options.sessions = ["fix", "check", "test"]
 nox.options.reuse_existing_virtualenvs = True
