@@ -1,3 +1,9 @@
+"""
+Nox configuration file for local testing. Reuses local environment to speed up
+process.
+
+A separate configuration will be required for CI
+"""
 import nox
 
 
