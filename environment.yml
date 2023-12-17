@@ -1,0 +1,7 @@
+name: imagenet-service
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - poetry=1.7.1
+  - pip
