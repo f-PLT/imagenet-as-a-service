@@ -17,41 +17,40 @@ This project assumes the use of `micromamba` and has only been tested under Linu
 
 To create the environment:
 
-"""
+```shell
 $ make create-env
 
 # OR
 
 $ make CONDA_TOOL="<YOUR_CONDA_TOOL>" create-env
-"""
+```
 
 The application and Python dependencies can then be installed
-"""
+```shell
 $ make install
-"""
+```
 
 ### Docker Install
 
 To build the application as a Docker container
-"""
+```shell
 $ make docker-build
-"""
+```
 
 To run the application
-"""
+```shell
 $ make docker-run
 
 # or, with the application module mounted to the Docker container
 # for live-reload development
 $ make docker-run-dev
-"
+```
 
 ### Development
 
 This project uses Nox to automate linting checks, autoformatting and running tests.
 
-"""
-
+```shell
 # Check lint
 $ make check-lint
 
@@ -63,4 +62,4 @@ $ make test
 
 # To run all checks and fixes
 $ nox
-"
+```
