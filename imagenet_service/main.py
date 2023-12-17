@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Welcome, ths is a small service to explore and play around ImageNet models using Pytorch"}
 
 
 @app.post("/predict")
