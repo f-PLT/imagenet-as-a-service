@@ -47,3 +47,8 @@ check-lint: ## Check code linting
 .PHONY: fix-lint
 fix-lint: ## Fix code linting
 	nox -s fix
+
+#### Tests ####
+.PHONY: test
+test: ## Run tests
+	nox -s test
